@@ -1,3 +1,4 @@
+users = require('./models/usermodels');
 exports.index = function(req,res){
     res.send("Halaman User");
 }
