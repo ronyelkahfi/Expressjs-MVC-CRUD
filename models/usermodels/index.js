@@ -1,15 +1,16 @@
 //module.exports = function(){
     const Sequelize = require('sequelize');
-    const sequelize = new Sequelize('dbmybilling', 'root', 'root', {
+    const conn = new Sequelize('dbmybilling', 'root', 'root', {
         host: "127.0.0.1",
-        dialect : 'mariadb',
+        dialect : 'mysql',
         operatorsAliases: false
       });
+      conn.authenticate();
 
-    try{
-        sequalize.authenticate();
-        console.log("database connected successfully");
-    }catch(error){
-        console.log(`unable to access database : ${error}`);
-    }
+    // try{
+    //     sequalize.authenticate();
+    //     console.log("database connected successfully");
+    // }catch(error){
+    //     console.log(`unable to access database : ${error}`);
+    // }
 //}
